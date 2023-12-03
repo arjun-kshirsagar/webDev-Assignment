@@ -166,73 +166,22 @@ body {
   #topbar {
     height: 40px;
     font-size: 14px;
-    transition: all 0.5s;
+    /* transition: all 0.5s; */
     z-index: 996;
-  }
-  
-  #topbar.topbar-scrolled {
-    top: -40px;
-  }
-  
-  #topbar .contact-info i {
-    font-style: normal;
-    color: #d9ba85;
-  }
-  
-  #topbar .contact-info i span {
-    padding-left: 5px;
-    color: #fff;
-  }
-  
-  #topbar .languages ul {
-    display: flex;
-    flex-wrap: wrap;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    color: #cda45e;
-  }
-  
-  #topbar .languages ul a {
-    color: white;
-  }
-  
-  #topbar .languages ul li + li {
-    padding-left: 10px;
-  }
-  
-  #topbar .languages ul li + li::before {
-    display: inline-block;
-    padding-right: 10px;
-    color: rgba(255, 255, 255, 0.5);
-    content: "/";
   }
   
   /*--------------------------------------------------------------
   # Header
-  --------------------------------------------------------------*/
-  #header {
-    background: rgb(12, 11, 9);
-    border-bottom: 1px solid rgba(12, 11, 9, 0.6);
-    transition: all 0.5s;
-    z-index: 997;
-    padding: 15px 0;
-    top: 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap; /* Allow items to wrap to the next line if needed */
-  }
-  
+  --------------------------------------------------------------*/  
   #header.header-scrolled {
     top: 0;
-    background: rgba(0, 0, 0, 0.85);
+    background: transparent;
     border-bottom: 1px solid #37332a;
   }
   
   #header .logo {
     font-size: 28px;
-    margin: 0;
+    /* margin: 0; */
     padding: 0;
     line-height: 1;
     font-weight: 300;
@@ -246,10 +195,15 @@ body {
     color: #fff;
   }
   
-  #navbar {
-    flex: 1; /* Takes as much space as possible */
+  #navbar {/* Takes as much space as possible */
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
+  }
+
+  #navlinks {
+    display: flex;
+
+    justify-content: space-around;
   }
   
   #navbar ul {
@@ -262,6 +216,7 @@ body {
   #navbar li {
     margin-right: 15px;
   }
+
   
   #navbar a {
     color: #fff;
@@ -270,7 +225,7 @@ body {
     text-transform: uppercase;
     letter-spacing: 1px;
     padding-bottom: 5px;
-    position: relative;
+    /* position: relative; */
   }
   
   #navbar a:hover {
@@ -280,6 +235,13 @@ body {
   .mobile-nav-toggle {
     display: none;
   }
+
+  #nav-book-btn {
+    display: flex;
+    /* text-align: center; */
+    align-items: center;
+    justify-content: center;
+  }
   
   .book-a-table-btn {
     color: #fff;
@@ -288,6 +250,10 @@ body {
     padding: 10px 20px;
     text-decoration: none;
     margin-left: 15px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
   }
   
   @media (max-width: 992px) {
@@ -398,21 +364,63 @@ body {
     color: #d9ba85;
   }
   
-  .navbar .dropdown ul {
-    display: block;
-    position: absolute;
-    left: 14px;
-    top: calc(100% + 30px);
-    margin: 0;
-    padding: 10px 0;
-    z-index: 99;
-    opacity: 0;
-    visibility: hidden;
-    background: #fff;
-    box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
-    transition: 0.3s;
-    border-radius: 4px;
-  }
+
+/* Dropdown Button */
+.dropbtn {
+	background-color: transparent;
+	padding: 16px;
+	font-size: 16px;
+	border: none;
+	cursor: pointer;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+	position: relative;
+	display: inline-block;
+}
+
+.book-btn {
+	background-color: #fca73f;
+	color: white;
+	padding: 10px 20px;
+	border-radius: 1000px;
+	border: none;
+	font-weight: bold;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: transparent;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+	z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+	color: black;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+	background-color: #f1f1f1;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+	display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+	background-color: #fca73f;
+}
   
   .navbar .dropdown ul li {
     min-width: 200px;
@@ -748,9 +756,20 @@ body {
       font-size: 28px;
       line-height: 36px;
     }
+    
+    
     #hero h2 {
       font-size: 18px;
       line-height: 24px;
+    }
+
+    #abcd {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .section-title {
+      font-size: 28px;
+      /* line-height: 36px; */
     }
   }
   
@@ -791,15 +810,16 @@ body {
   .section-title {
     padding-bottom: 40px;
   }
-  
-  .section-title h2 {
+
+  .section-title p {
     font-size: 14px;
     font-weight: 500;
     padding: 0;
-    line-height: 1px;
+    /* line-height: 1px; */
     margin: 0 0 5px 0;
     letter-spacing: 2px;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
+    text-align: center;
     color: #aaaaaa;
     font-family: "Poppins", sans-serif;
   }
@@ -807,7 +827,7 @@ body {
   .section-title h2::after {
     content: "";
     width: 120px;
-    height: 1px;
+    /* height: 1px; */
     display: inline-block;
     background: rgba(255, 255, 255, 0.2);
     margin: 4px 10px;
@@ -877,103 +897,81 @@ body {
   /*--------------------------------------------------------------
   # About
   --------------------------------------------------------------*/
+/* General Styles */
+.about {
+  background: url("../Project-3/images/about.jpg/about-bg.jpg") center center;
+  background-size: cover;
+  position: relative;
+  padding: 80px 0;
+}
+
+.about:before {
+  content: "";
+  background: rgba(230, 236, 148, 0.8);
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.about .row {
+  display: flex;
+  flex-direction: column; /* Adjust to a column layout on smaller screens */
+}
+
+.about .about-img {
+  max-width: 100%; /* Adjust maximum width for smaller screens */
+  max-height: auto; /* Allow height to adjust based on width */
+  border: 4px solid rgba(255, 255, 255, 0.2);
+  position: relative;
+  flex-shrink: 0;
+  margin-bottom: 20px; /* Add some space between the image and text */
+}
+
+.about .about-img:hover {
+  transform: scale(1.03);
+}
+
+.about .about-img:hover::before {
+  left: 10px;
+  top: 10px;
+}
+
+.about .about-img:hover::after {
+  right: 10px;
+  bottom: 10px;
+}
+
+.about .content {
+  padding-left: 0; /* Reset padding for smaller screens */
+}
+
+.about-text {
+  text-align: center; /* Center text on smaller screens */
+}
+
+/* Styles for Large Screens (1024px and above) */
+@media (min-width: 1024px) {
   .about {
-    background: url("../Project-3/images/about.jpg/about-bg.jpg") center center;
-    background-size: cover;
-    position: relative;
-    padding: 80px 0;
+    background-attachment: fixed;
   }
-  
-  .about:before {
-    content: "";
-    background: rgba(230, 236, 148, 0.8);
-    position: absolute;
-    bottom: 0;
-    top: 0;
-    left: 0;
-    right: 0;
-  }
-  
+
   .about .row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: row;
   }
-  
+
   .about .about-img {
-    max-width: 80%; /* Set maximum width to 80% of the parent container */
-    max-height: 80%; /* Set maximum height to 80% of the parent container */
-    border: 4px solid rgba(255, 255, 255, 0.2);
-    position: relative;
-    flex-shrink: 0; /* Prevent the image from shrinking */
+    max-width: 80%;
+    max-height: 80%;
   }
-  
-  /* .about .about-img::before {
-    position: absolute;
-    left: 20px;
-    top: 20px;
-    width: 60px;
-    height: 60px;
-    z-index: 1;
-    content: '';
-    border-left: 5px solid #cda45e;
-    border-top: 5px solid #cda45e;
-    transition: .5s;
-  } */
-  
-  /* .about .about-img::after {
-    position: absolute;
-    right: 20px;
-    bottom: 20px;
-    width: 60px;
-    height: 60px;
-    z-index: 2;
-    content: '';
-    border-right: 5px solid #cda45e;
-    border-bottom: 5px solid #cda45e;
-    transition: .5s;
-  } */
-  
-   .about .about-img:hover {
-    transform: scale(1.03);
-   }
-  
-  .about .about-img:hover::before {
-    left: 10px;
-    top: 10px;
-  }
-  
-  .about .about-img:hover::after {about-img:hover {
-    transform: scale(1.03);
-  }
-  
-  .about .about-img:hover::before {
-    left: 10px;
-    top: 10px;
-  }
-  
-  .about .about-img:hover::after {
-    right: 10px;
-    bottom: 10px;
-  }
-    right: 10px;
-    bottom: 10px;
-  }
-  
-  
+
   .about .content {
     flex-grow: 1;
-    padding-left: 20px; /* Add some space between the image and text */
+    padding-left: 20px;
   }
-  
-  .about .content h3 {
-    font-weight: 600;
-    font-size: 26px;
-    color: black;
-    filter: brightness(100%);
-    opacity: 1;
-  }
-  
+
+  .about .content h3,
   .about .content p,
   .about .content ul,
   .about .content li {
@@ -981,31 +979,27 @@ body {
     filter: brightness(100%);
     opacity: 1;
   }
-  
+
   .about .content ul {
     list-style: none;
     padding: 0;
   }
-  
+
   .about .content ul li {
     padding-bottom: 10px;
   }
-  
+
   .about .content ul i {
     font-size: 20px;
     padding-right: 4px;
     color: #cda45e;
   }
-  
+
   .about .content p:last-child {
     margin-bottom: 0;
   }
+}
   
-  @media (min-width: 1024px) {
-    .about {
-      background-attachment: fixed;
-    }
-  }
   
     
   
@@ -1203,6 +1197,14 @@ body {
   --------------------------------------------------------------*/
   .specials {
     overflow: hidden;
+    background-color: white;
+    color: black;
+
+
+    /* font-palette: ; */
+  }
+  .specials .fst-italic {
+    color: black;
   }
   
   .specials .nav-tabs {
@@ -1254,6 +1256,43 @@ body {
     margin-bottom: 0;
   }
   
+  /* Add the following styles for image alignment */
+  .specials .tab-pane .row {
+    display: flex;
+    align-items: center;
+  }
+  
+  .specials .col-lg-8.details {
+    flex: 1;
+  }
+  
+  .specials .col-lg-4.text-center {
+    flex: 0 0 40%; /* Adjust the width as needed */
+    margin-bottom: 20px; /* Add some space between text and image */
+  }
+  
+  .specials .text-center img {
+    width: 100%; /* Make the image responsive within its container */
+  }
+  
+
+
+  .specials {
+    overflow: hidden;
+    background-color: white;
+    color: black;
+    display: none; /* Hide the specials section by default */
+  
+    /* Other existing styles... */
+  }
+  
+  #event1 {
+    display: flex;
+
+  }
+
+
+
   @media (max-width: 992px) {
     .specials .nav-link {
       border: 0;
@@ -1287,7 +1326,287 @@ body {
   .events .container {
     position: relative;
   }
-  
+
+  #events {
+    color:#fff;
+    height: 1000px;
+    background-image: url(Project-3/images/events-bg.jpg);
+    background-blend-mode: darken;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  #events h1{
+    margin-top: 100px;;
+    text-align: center;
+    font-size: 60px;
+    padding-top: 150px;
+}
+#events h1 span{
+    color:white;
+} 
+#organize h1{
+    margin-top: 50px;;
+    text-align: center;
+    font-size: 60px;
+    padding-top: 50px;
+}
+#organize h1 span{
+    color:orange;
+} 
+
+#organize {
+    color:#fff;
+    height: 2000px;
+    background-image: url(Project-3/images/events-bg.jpg);
+    background-blend-mode: darken;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+#party1 img{
+    height:400px;
+    margin-left: 50px;
+    margin-top: 100px;
+}
+
+#money1{
+    text-decoration: underline;
+}
+
+#party1{
+    display:flex;
+    margin-top:100px;
+}
+
+#party1content{
+    margin-left:40px;
+    margin-top:100px;
+}
+
+
+
+#party1content h2{
+    margin-top:0px;
+}
+
+
+#party2 img{
+    height:400px;
+    margin-left: 50px;
+    margin-top: 100px;
+}
+
+#money2{
+    text-decoration: underline;
+}
+
+#party2{
+    display:flex;
+    margin-top:100px;
+}
+
+#custom{
+    margin-left:40px;
+    margin-top:100px;
+}
+
+
+
+#custom h2{
+    margin-top:0px;
+}
+
+
+
+#party3 img{
+    height:400px;
+    margin-left: 50px;
+    margin-top: 100px;
+}
+
+#money3{
+    text-decoration: underline;
+}
+
+#party3{
+    display:flex;
+    margin-top:100px;
+}
+
+#birthday{
+    margin-left:40px;
+    margin-top:100px;
+}
+
+
+
+#birthday h2{
+    margin-top:0px;
+}
+
+
+#testimonials{
+  color:#fff;
+  width: 100%;
+  margin: 0px;
+  height: 2600px;
+  background-image: url(Project-3/images/testimonials-bg.jpg);
+  background-blend-mode: darken;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+#review{
+  font-size: 35px;
+}
+
+.star{
+  height: 50px;
+}
+
+#testimonials h1{
+  font-size: 64px;
+  text-align: center;
+  justify-content: center;
+  color: goldenrod;
+  margin-bottom: 5px;;
+}
+
+
+#testimonial-1{
+  margin: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#testimonial-1 h3{
+  font-size: 30px;
+  margin-bottom: 5px;;
+}
+
+#man1{
+  margin-top: 20px;
+  width: 150px;
+  border-radius: 50%;
+  align-items: center;
+}
+
+#testimonial-1 p{
+  margin-top: 0px;
+  font-size: 25px;
+}
+
+
+#testimonial-2{
+  margin: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#testimonial-2 h3{
+  font-size: 30px;
+  margin-bottom: 5px;;
+}
+
+#man2{
+  margin-top: 20px;
+  width: 150px;
+  border-radius: 50%;
+  align-items: center;
+}
+
+#testimonial-2 p{
+  margin-top: 0px;
+  font-size: 25px;
+}
+
+
+#testimonial-3{
+  margin: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#testimonial-3 h3{
+  font-size: 30px;
+  margin-bottom: 5px;;
+}
+
+#man3{
+  margin-top: 20px;
+  width: 150px;
+  border-radius: 50%;
+  align-items: center;
+}
+
+#testimonial-3 p{
+  margin-top: 0px;
+  font-size: 25px;
+}
+
+
+#testimonial-4{
+  margin: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#testimonial-4 h3{
+  font-size: 30px;
+  margin-bottom: 5px;;
+}
+
+#man4{
+  margin-top: 20px;
+  width: 150px;
+  border-radius: 50%;
+  align-items: center;
+}
+
+#testimonial-4 p{
+  margin-top: 0px;
+  font-size: 25px;
+}
+
+
+#testimonial-5{
+  margin: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#testimonial-5 h3{
+  font-size: 30px;
+  margin-bottom: 5px;;
+}
+
+#man5{
+  margin-top: 20px;
+  width: 150px;
+  border-radius: 50%;
+  align-items: center;
+}
+
+#testimonial-5 p{
+  margin-top: 0px;
+  font-size: 25px;
+}
+
+
+
   @media (min-width: 1024px) {
     .events {
       background-attachment: fixed;
@@ -1358,16 +1677,6 @@ body {
   /*--------------------------------------------------------------
   # Book A Table
   --------------------------------------------------------------*/
-  #book-a-table {
-    background-color: wheat;
-    align-items: center;
-    align-content: center;
-}
-
-#book-a-table .php-email-form {
-    background-color: white;
-}
-
   .book-a-table .php-email-form {
     width: 100%;
   }
@@ -1382,6 +1691,19 @@ body {
     margin: 0 0 15px 0;
     font-weight: 400;
     font-size: 13px;
+  }
+  
+  .book-a-table .php-email-form .error-message {
+    display: none;
+    color: #fff;
+    background: #ed3c0d;
+    text-align: left;
+    padding: 15px;
+    font-weight: 600;
+  }
+  
+  .book-a-table .php-email-form .error-message br + br {
+    margin-top: 25px;
   }
   
   .book-a-table .php-email-form .sent-message {
@@ -1399,16 +1721,33 @@ body {
     padding: 15px;
   }
   
+  .book-a-table .php-email-form .loading:before {
+    content: "";
+    display: inline-block;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    margin: 0 10px -6px 0;
+    border: 3px solid #cda45e;
+    border-top-color: #1a1814;
+    -webkit-animation: animate-loading 1s linear infinite;
+    animation: animate-loading 1s linear infinite;
+  }
+  
   .book-a-table .php-email-form input, .book-a-table .php-email-form textarea {
     border-radius: 0;
     box-shadow: none;
     font-size: 14px;
-    background: #e2d5bb;
+    background: #0c0b09;
     border-color: #625b4b;
     color: white;
   }
   
   .book-a-table .php-email-form input::-webkit-input-placeholder, .book-a-table .php-email-form textarea::-webkit-input-placeholder {
+    color: #a49b89;
+  }
+  
+  .book-a-table .php-email-form input::-moz-placeholder, .book-a-table .php-email-form textarea::-moz-placeholder {
     color: #a49b89;
   }
   
@@ -1441,45 +1780,34 @@ body {
     background: #d3af71;
   }
 
-  .book-a-table .php-email-form .row {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
-  }
-  
+  /* Add the following CSS styles to your existing CSS */
+
+.book-a-table .php-email-form .row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.book-a-table .php-email-form .form-group {
+  width: 100%;
+  padding-bottom: 8px;
+}
+
+/* Adjust the width of form elements as needed */
+.book-a-table .php-email-form .form-group input,
+.book-a-table .php-email-form .form-group textarea,
+.book-a-table .php-email-form button[type="submit"] {
+  width: 100%;
+}
+
+/* Add media query for responsiveness */
+@media (min-width: 768px) {
   .book-a-table .php-email-form .form-group {
-    width: 100%;
-    margin-bottom: 15px;
+    width: calc(33.3333% - 20px); /* Adjust the width and margin as needed */
+    margin-right: 20px;
   }
-  
-  /* Optionally, you can adjust the styling of the form fields for better spacing */
-  .book-a-table .php-email-form input,
-  .book-a-table .php-email-form textarea,
-  .book-a-table .php-email-form select {
-    width: 100%;
-    padding: 10px;
-    box-sizing: border-box;
-  }
-  
-  /* Center the button and give it full width */
-  .book-a-table .php-email-form button[type="submit"] {
-    width: 100%;
-    margin-top: 15px;
-  }
-  
-  #book-a-table .section-title h2 {
-    font-weight: bold;
-    color: orange;
 }
 
-#book-a-table .section-title p {
-    color: black;
-    font-weight: normal;
-}
-
-  
-  
-  
   /*--------------------------------------------------------------
   # Testimonials
   --------------------------------------------------------------*/
@@ -1593,6 +1921,7 @@ body {
 
   .chefs {
     background-image: url("Project-3/images/chefs-bg.jpg");
+    background-blend-mode: hard-light;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -1931,6 +2260,7 @@ body {
     padding: 8px 0;
     margin-right: 4px;
     border-radius: 50%;
+    justify-content: center;
     text-align: center;
     width: 36px;
     height: 36px;
