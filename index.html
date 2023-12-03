@@ -6,20 +6,59 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>LOREM-IPSUM</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-...">
   
+  <title>LOREM-IPSUM</title>
+  <link rel="icon" href="Project-3/images/favicon.png" type="image/png">
+
+
+
+
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var specialsSection = document.getElementById('specials');
+      var toggleButton = document.getElementById('toggleButton');
+  
+      toggleButton.addEventListener('click', function () {
+        if (specialsSection.style.display === 'none') {
+          specialsSection.style.display = 'block';
+        } else {
+          specialsSection.style.display = 'none';
+        }
+      });
+    });
+  </script>
+  
+
+
+
+
 </head>
 <body>
+  <div id="topbar" class="d-flex align-items-center fixed-top">
+    <div class="container d-flex justify-content-center justify-content-md-between">
+
+      <div class="contact-info">
+        <i class="fas fa-phone-alt"><span>+1 5589 55488 55</span></i>
+        <i class="fas fa-clock"><span> Mon-Sat: 11AM - 23PM</span></i>
+      </div>
+    </div>
+  </div>
+
   <header id="header" class="fixed-top d-flex align-items-cente">
+    
     <div class="container-fluid container-xl d-flex align-items-center justify-content-lg-between">
 
-      <h1 class="logo me-auto me-lg-0">LOREM-IPSUM</a></h1>
-      <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html" class="logo me-auto me-lg-0"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
-
+      
       <nav id="navbar" class="navbar order-last order-lg-0">
+        <div id="headerLogo">
+        <h1 class="logo me-auto me-lg-0">LOREM-IPSUM</a></h1>
+      </div>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html" class="logo me-auto me-lg-0"><img src="assets/img/logo.png" alt="" class="img-fluid"></a> -->
+        <div id="navlinks">
         <ul>
           <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
           <li><a class="nav-link scrollto" href="#about">About</a></li>
@@ -28,28 +67,25 @@
           <li><a class="nav-link scrollto" href="#events">Events</a></li>
           <li><a class="nav-link scrollto" href="#chefs">Chefs</a></li>
           <li><a class="nav-link scrollto" href="#gallery">Gallery</a></li>
-          <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-              <li><a href="#">Drop Down 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li><a href="#">Deep Drop Down 1</a></li>
-                  <li><a href="#">Deep Drop Down 2</a></li>
-                  <li><a href="#">Deep Drop Down 3</a></li>
-                  <li><a href="#">Deep Drop Down 4</a></li>
-                  <li><a href="#">Deep Drop Down 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Drop Down 2</a></li>
-              <li><a href="#">Drop Down 3</a></li>
-              <li><a href="#">Drop Down 4</a></li>
-            </ul>
-          </li>
+          <div class="dropdown">
+					<button class="dropbtn">
+						Drop Down
+						<i class="fa fa-caret-down"></i>
+					</button>
+					<div class="dropdown-content">
+						<a href="#">Option 1</a>
+						<a href="#">Option 2</a>
+						<a href="#">Option 3</a>
+					</div>
+				</div>
           <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
         </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
+        <div id="nav-book-btn">
+          <!-- <a href="#book-a-table" class="book-a-table-btn scrollto d-none d-lg-flex"><p>Book a table</p></a> -->
+          <button id="nav-book-btn" class="book-a-table-btn scrollto d-none d-lg-flex" onclick="document.getElementById('book-a-table').scrollIntoView()">Book a table</button>
+        </div>
+      </div>
       </nav><!-- .navbar -->
-      <a href="#book-a-table" class="book-a-table-btn scrollto d-none d-lg-flex">Book a table</a>
 
     </div>
   </header>
@@ -77,29 +113,42 @@
       <div class="row">
         <div class="col-lg-6 order-1 order-lg-2 aos-init aos-animate" data-aos="zoom-in" data-aos-delay="100">
           <div class="about-img">
-            <img src="Project-3/images/about.jpg" alt="">
+            <img src="Project-3/images/about.jpg" alt="" height="683px" width="1024px">
           </div>
         </div>
-        <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
-          <h3>Eum ipsum loborum delenti velit pariatus<br>architecto out nihil</h3>
-          <p class="fst-italic">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-            magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit.
-          </p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-            magna aliqua.</p>
-          <ul>
-            <li><i class="bi bi-check-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-            <li><i class="bi bi-check-circle"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-            <li><i class="bi bi-check-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</li>
-          </ul>
+       <div class="about-text">
+          <h1>About</h1>
           <p>
-            Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-            velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum
+            Lorem ipsum dolor sit amet consectetur adipisicing Quisquam quibusdam,
+            voluptatum, quod, voluptatem voluptas quia quae asperiores, quos doloribus
+            quas voluptatibus. Quisquam quibusdam, voluptatum, quod, voluptatem
+            voluptas quia quae asperiores, quos doloribus quas voluptatibus.
           </p>
-        </div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing Quisquam quibusdam,
+            voluptatum, quod, voluptatem voluptas quia quae asperiores, quos doloribus
+            quas voluptatibus. Quisquam quibusdam, voluptatum, quod, voluptatem
+            voluptas quia quae asperiores, quos doloribus quas voluptatibus.
+          </p>
+  
+          <ul>
+            <li>
+              
+              <i class="fas fa-check"></i> Lorem ipsum dolor sit amet .
+            </li>
+            <li>
+              
+              <i class="fas fa-check"></i> Lorem ipsum dolor sit amet consectetur
+              adipisicing
+            </li>
+            <li>
+              <i class="fas fa-check"></i> Lorem ipsum dolor sit amet consectetur
+              adipisicing
+            </li>
+          </ul>
+        </div> 
       </div>
+
 
     </div>
   </section>
@@ -108,8 +157,7 @@
     <div class="container aos-init aos-animate" data-aos="fade-up">
 
       <div class="section-title">
-        <h2>Why Us</h2>
-        <p>Why Choose Our Restaurant</p>
+        <p id="abcd">Why Choose Our Restaurant</p>
       </div>
 
       <div class="row">
@@ -142,13 +190,6 @@
 
     </div>
   </section>
-
-
-  
-
-
-
-
 
 
 
@@ -259,12 +300,206 @@
     </div>
   </section>
 
+  <section id="specials" class="specials">
+    <div class="container aos-init aos-animate" data-aos="fade-up">
+
+      <div class="section-title">
+        <h2>Specials</h2>
+        <p>Check Our Specials</p>
+      </div>
+
+        <div class="col-lg-9 mt-4 mt-lg-0">
+          <div class="tab-content">
+              <div class="row">
+
+                <div class="col-lg-8 details order-2 order-lg-1">
+                  <h3>Architecto ut aperiam autem id</h3>
+                  <p class="fst-italic">Qui laudantium consequatur laborum sit qui ad sapiente dila parde sonata raqer a videna mareta paulona marka</p>
+                  <p>Et nobis maiores eius. Voluptatibus ut enim blanditiis atque harum sint. Laborum eos ipsum ipsa odit magni. Incidunt hic ut molestiae aut qui. Est repellat minima eveniet eius et quis magni nihil. Consequatur dolorem quaerat quos qui similique accusamus nostrum rem vero</p>
+                </div>
+                
+                <div id="event1">
+
+                  <div class="col-lg-4 text-center order-1 order-lg-2">
+                    <img src="Project-3/images/specials-1.jpg" alt="" class="img-fluid">
+                  </div>
+  
+                  <div class="col-lg-8 details order-2 order-lg-1">
+                    <h3>Et blanditiis nemo veritatis excepturi</h3>
+                    <p class="fst-italic">Qui laudantium consequatur laborum sit qui ad sapiente dila parde sonata raqer a videna mareta paulona marka</p>
+                    <p>Ea ipsum voluptatem consequatur quis est. Illum error ullam omnis quia et reiciendis sunt sunt est. Non aliquid repellendus itaque accusamus eius et velit ipsa voluptates. Optio nesciunt eaque beatae accusamus lerode pakto madirna desera vafle de nideran pal</p>
+                  </div>
+                </div>
+
+
+                <div class="col-lg-4 text-center order-1 order-lg-2">
+                  <img src="Project-3/images/specials-2.jpg" alt="" class="img-fluid">
+                </div>
+                
+                  <div class="col-lg-8 details order-2 order-lg-1">
+                    <h3>Impedit facilis occaecati odio neque aperiam sit</h3>
+                    <p class="fst-italic">Eos voluptatibus quo. Odio similique illum id quidem non enim fuga. Qui natus non sunt dicta dolor et. In asperiores velit quaerat perferendis aut</p>
+                    <p>Iure officiis odit rerum. Harum sequi eum illum corrupti culpa veritatis quisquam. Neque necessitatibus illo rerum eum ut. Commodi ipsam minima molestiae sed laboriosam a iste odio. Earum odit nesciunt fugiat sit ullam. Soluta et harum voluptatem optio quae</p>
+                  </div>
+                  <div class="col-lg-4 text-center order-1 order-lg-2">
+                    <img src="Project-3/images/specials-3.jpg" alt="" class="img-fluid">
+                  </div>
+
+                  <div class="col-lg-8 details order-2 order-lg-1">
+                    <h3>Fuga dolores inventore laboriosam ut est accusamus laboriosam dolore</h3>
+                    <p class="fst-italic">Totam aperiam accusamus. Repellat consequuntur iure voluptas iure porro quis delectus</p>
+                    <p>Eaque consequuntur consequuntur libero expedita in voluptas. Nostrum ipsam necessitatibus aliquam fugiat debitis quis velit. Eum ex maxime error in consequatur corporis atque. Eligendi asperiores sed qui veritatis aperiam quia a laborum inventore</p>
+                  </div>
+                  <div class="col-lg-4 text-center order-1 order-lg-2">
+                    <img src="Project-3/images/specials-4.jpg" alt="" class="img-fluid">
+                  </div>
+
+                  <div class="col-lg-8 details order-2 order-lg-1">
+                    <h3>Est eveniet ipsam sindera pad rone matrelat sando reda</h3>
+                    <p class="fst-italic">Omnis blanditiis saepe eos autem qui sunt debitis porro quia.</p>
+                    <p>Exercitationem nostrum omnis. Ut reiciendis repudiandae minus. Omnis recusandae ut non quam ut quod eius qui. Ipsum quia odit vero atque qui quibusdam amet. Occaecati sed est sint aut vitae molestiae voluptate vel</p>
+                  </div>
+                  <div class="col-lg-4 text-center order-1 order-lg-2">
+                    <img src="Project-3/images/specials-5.jpg" alt="" class="img-fluid">
+                  </div>
+              </div>
+            
+              
+            
+                
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+  <section id="organize">
+
+      <h1>Organize Your 
+          <span>Events</span> 
+      In Our</h1>
+      
+      <div id="party1">
+
+          <img src="Project-3/images/event-private.jpg"></img>
+
+          <div id="party1content">
+
+              <h2 id="pp">Private Parties</h2>
+              <h2 id="money1">$290</h2>
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat, exercitationem distinctio quam qui vitae, eaque laboriosam iste odio dolores necessitatibus consequuntur fuga suscipit impedit nisi, labore consequatur reiciendis eligendi assumenda!</p>
+              <p># Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+          
+              <p># Ut enim ad minim veniam exercitation ullamco laboris nisi ut aliquip</p>
+  
+              <p># Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
+              <h2>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </h2>
+          </div>
+      </div>
+
+      <div id="party2">
+
+        <img src="Project-3/images/event-custom.jpg"></img>
+
+        <div id="custom">
+
+            <h2 id="qq">Private Parties</h2>
+            <h2 id="money2">$290</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat, exercitationem distinctio quam qui vitae, eaque laboriosam iste odio dolores necessitatibus consequuntur fuga suscipit impedit nisi, labore consequatur reiciendis eligendi assumenda!</p>
+            <p># Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+        
+            <p># Ut enim ad minim veniam exercitation ullamco laboris nisi ut aliquip</p>
+
+            <p># Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
+            <h2>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </h2>
+        </div>
+    </div>
+
+
+
+    <div id="party3">
+
+      <img src="Project-3/images/event-birthday.jpg"></img>
+
+      <div id="birthday">
+
+          <h2 id="rr">Private Parties</h2>
+          <h2 id="money3">$290</h2>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat, exercitationem distinctio quam qui vitae, eaque laboriosam iste odio dolores necessitatibus consequuntur fuga suscipit impedit nisi, labore consequatur reiciendis eligendi assumenda!</p>
+          <p># Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+      
+          <p># Ut enim ad minim veniam exercitation ullamco laboris nisi ut aliquip</p>
+
+          <p># Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
+          <h2>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </h2>
+      </div>
+  </div>
+
+  </section>
+  
+
+  <section id="testimonials"> 
+    <h1>Testimonials</h1>
+
+    <div id="testimonial-1">
+      <img src="Project-3/images/testimonials/testimonials-1.jpg" id="man1"></img>
+      <img src="Project-3/images/testimonials/5star.png" class="star"></img>
+      <h3>Aman</h3>
+      <p>Web Dev Instructor</p>
+      <p id="review">"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium</p>
+      <p id="review">quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicab"</p>
+    </div>
+
+
+    <div id="testimonial-2">
+      <img src="Project-3/images/testimonials/testimonials-2.jpg" id="man1"></img>
+      <img src="Project-3/images/testimonials/5star.png" class="star"></img>
+      <h3>Akanksha</h3>
+      <p>BSM</p>
+      <p id="review">"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium</p>
+      <p id="review">quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicab"</p>
+    </div>
+
+    <div id="testimonial-3">
+      <img src="Project-3/images/testimonials/testimonials-3.jpg" id="man1"></img>
+      <img src="Project-3/images/testimonials/5star.png" class="star"></img>
+      <h3>Vaishnavi</h3>
+      <p>BSM</p>
+      <p id="review">"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium</p>
+      <p id="review">quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicab"</p>
+    </div>
+
+    <div id="testimonial-4">
+      <img src="Project-3/images/testimonials/testimonials-4.jpg" id="man1"></img>
+      <img src="Project-3/images/testimonials/5star.png" class="star"></img>
+      <h3>Diwakar</h3>
+      <p>BSM</p>
+      <p id="review">"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium</p>
+      <p id="review">quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicab"</p>
+    </div>
+
+    <div id="testimonial-5">
+      <img src="Project-3/images/testimonials/testimonials-5.jpg" id="man1"></img>
+      <img src="Project-3/images/testimonials/5star.png" class="star"></img>
+      <h3>Dhruv</h3>
+      <p>BSM</p>
+      <p id="review">"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium</p>
+      <p id="review">quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicab"</p>
+    </div>
+
+
+</section>
+
+
+
   <section id="book-a-table" class="book-a-table">
     <div class="container aos-init aos-animate" data-aos="fade-up">
 
       <div class="section-title">
-        <h2>Book a Table</h2>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.  non! <br>Fugit expedita molestiae dolores commodi ullam, labore, corrupti similique</p>
+          <!-- <h2>Book a Table</h2> -->
+          <p>Book a Table</p>
       </div>
 
       <form action="forms/book-a-table.php" method="post" role="form" class="php-email-form aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
@@ -308,261 +543,6 @@
 
     </div>
   </section>
-
-
-
-
-  <section id="events" class="events">
-    <div class="container aos-init aos-animate" data-aos="fade-up">
-
-      <div class="section-title">
-        <h2>Events</h2>
-        <p>Organize Your Events in our Restaurant</p>
-      </div>
-
-      <div class="events-slider swiper-container swiper-container-initialized swiper-container-horizontal swiper-container-pointer-events aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
-        <div class="swiper-wrapper" id="swiper-wrapper-7933b2e9e21aef84" aria-live="off" style="transition-duration: 0ms; transform: translate3d(-6696px, 0px, 0px);"><div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="0" role="group" aria-label="1 / 9">
-            <div class="row event-item">
-              <div class="col-lg-6">
-                <img src="Project-3/images/event-birthday.jpg" class="img-fluid" alt="">
-              </div>
-              <div class="col-lg-6 pt-4 pt-lg-0 content">
-                <h3>Birthday Parties</h3>
-                <div class="price">
-                  <p><span>$189</span></p>
-                </div>
-                <p class="fst-italic">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                  magna aliqua.
-                </p>
-                <ul>
-                  <li><i class="bi bi-check-circled"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                  <li><i class="bi bi-check-circled"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-                  <li><i class="bi bi-check-circled"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                </ul>
-                <p>
-                  Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                  velit esse cillum dolore eu fugiat nulla pariatur
-                </p>
-              </div>
-            </div>
-          </div><div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="1" role="group" aria-label="2 / 9">
-            <div class="row event-item">
-              <div class="col-lg-6">
-                <img src="Project-3/images/event-private.jpg" class="img-fluid" alt="">
-              </div>
-              <div class="col-lg-6 pt-4 pt-lg-0 content">
-                <h3>Private Parties</h3>
-                <div class="price">
-                  <p><span>$290</span></p>
-                </div>
-                <p class="fst-italic">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                  magna aliqua.
-                </p>
-                <ul>
-                  <li><i class="bi bi-check-circled"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                  <li><i class="bi bi-check-circled"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-                  <li><i class="bi bi-check-circled"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                </ul>
-                <p>
-                  Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                  velit esse cillum dolore eu fugiat nulla pariatur
-                </p>
-              </div>
-            </div>
-          </div><div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-prev" data-swiper-slide-index="2" role="group" aria-label="3 / 9">
-            <div class="row event-item">
-              <div class="col-lg-6">
-                <img src="Project-3/images/event-custom.jpg" class="img-fluid" alt="">
-              </div>
-              <div class="col-lg-6 pt-4 pt-lg-0 content">
-                <h3>Custom Parties</h3>
-                <div class="price">
-                  <p><span>$99</span></p>
-                </div>
-                <p class="fst-italic">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                  magna aliqua.
-                </p>
-                <ul>
-                  <li><i class="bi bi-check-circled"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                  <li><i class="bi bi-check-circled"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-                  <li><i class="bi bi-check-circled"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                </ul>
-                <p>
-                  Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                  velit esse cillum dolore eu fugiat nulla pariatur
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="swiper-slide swiper-slide-duplicate-active" data-swiper-slide-index="0" role="group" aria-label="4 / 9">
-            <div class="row event-item">
-              <div class="col-lg-6">
-                <img src="Project-3/images/event-birthday.jpg" class="img-fluid" alt="">
-              </div>
-              <div class="col-lg-6 pt-4 pt-lg-0 content">
-                <h3>Birthday Parties</h3>
-                <div class="price">
-                  <p><span>$189</span></p>
-                </div>
-                <p class="fst-italic">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                  magna aliqua.
-                </p>
-                <ul>
-                  <li><i class="bi bi-check-circled"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                  <li><i class="bi bi-check-circled"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-                  <li><i class="bi bi-check-circled"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                </ul>
-                <p>
-                  Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                  velit esse cillum dolore eu fugiat nulla pariatur
-                </p>
-              </div>
-            </div>
-          </div><!-- End testimonial item -->
-
-          <div class="swiper-slide swiper-slide-duplicate-next" data-swiper-slide-index="1" role="group" aria-label="5 / 9">
-            <div class="row event-item">
-              <div class="col-lg-6">
-                <img src="Project-3/images/event-private.jpg" class="img-fluid" alt="">
-              </div>
-              <div class="col-lg-6 pt-4 pt-lg-0 content">
-                <h3>Private Parties</h3>
-                <div class="price">
-                  <p><span>$290</span></p>
-                </div>
-                <p class="fst-italic">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                  magna aliqua.
-                </p>
-                <ul>
-                  <li><i class="bi bi-check-circled"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                  <li><i class="bi bi-check-circled"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-                  <li><i class="bi bi-check-circled"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                </ul>
-                <p>
-                  Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                  velit esse cillum dolore eu fugiat nulla pariatur
-                </p>
-              </div>
-            </div>
-          </div><!-- End testimonial item -->
-
-          <div class="swiper-slide swiper-slide-prev" data-swiper-slide-index="2" role="group" aria-label="6 / 9">
-            <div class="row event-item">
-              <div class="col-lg-6">
-                <img src="Project-3/images/event-custom.jpg" class="img-fluid" alt="">
-              </div>
-              <div class="col-lg-6 pt-4 pt-lg-0 content">
-                <h3>Custom Parties</h3>
-                <div class="price">
-                  <p><span>$99</span></p>
-                </div>
-                <p class="fst-italic">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                  magna aliqua.
-                </p>
-                <ul>
-                  <li><i class="bi bi-check-circled"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                  <li><i class="bi bi-check-circled"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-                  <li><i class="bi bi-check-circled"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                </ul>
-                <p>
-                  Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                  velit esse cillum dolore eu fugiat nulla pariatur
-                </p>
-              </div>
-            </div>
-          </div><!-- End testimonial item -->
-
-        <div class="swiper-slide swiper-slide-duplicate swiper-slide-active" data-swiper-slide-index="0" role="group" aria-label="7 / 9">
-            <div class="row event-item">
-              <div class="col-lg-6">
-                <img src="Project-3/images/event-birthday.jpg" class="img-fluid" alt="">
-              </div>
-              <div class="col-lg-6 pt-4 pt-lg-0 content">
-                <h3>Birthday Parties</h3>
-                <div class="price">
-                  <p><span>$189</span></p>
-                </div>
-                <p class="fst-italic">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                  magna aliqua.
-                </p>
-                <ul>
-                  <li><i class="bi bi-check-circled"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                  <li><i class="bi bi-check-circled"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-                  <li><i class="bi bi-check-circled"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                </ul>
-                <p>
-                  Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                  velit esse cillum dolore eu fugiat nulla pariatur
-                </p>
-              </div>
-            </div>
-          </div><div class="swiper-slide swiper-slide-duplicate swiper-slide-next" data-swiper-slide-index="1" role="group" aria-label="8 / 9">
-            <div class="row event-item">
-              <div class="col-lg-6">
-                <img src="Project-3/images/event-private.jpg" class="img-fluid" alt="">
-              </div>
-              <div class="col-lg-6 pt-4 pt-lg-0 content">
-                <h3>Private Parties</h3>
-                <div class="price">
-                  <p><span>$290</span></p>
-                </div>
-                <p class="fst-italic">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                  magna aliqua.
-                </p>
-                <ul>
-                  <li><i class="bi bi-check-circled"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                  <li><i class="bi bi-check-circled"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-                  <li><i class="bi bi-check-circled"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                </ul>
-                <p>
-                  Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                  velit esse cillum dolore eu fugiat nulla pariatur
-                </p>
-              </div>
-            </div>
-          </div><div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-prev" data-swiper-slide-index="2" role="group" aria-label="9 / 9">
-            <div class="row event-item">
-              <div class="col-lg-6">
-                <img src="Project-3/images/event-custom.jpg" class="img-fluid" alt="">
-              </div>
-              <div class="col-lg-6 pt-4 pt-lg-0 content">
-                <h3>Custom Parties</h3>
-                <div class="price">
-                  <p><span>$99</span></p>
-                </div>
-                <p class="fst-italic">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                  magna aliqua.
-                </p>
-                <ul>
-                  <li><i class="bi bi-check-circled"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                  <li><i class="bi bi-check-circled"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-                  <li><i class="bi bi-check-circled"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                </ul>
-                <p>
-                  Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                  velit esse cillum dolore eu fugiat nulla pariatur
-                </p>
-              </div>
-            </div>
-          </div></div>
-        <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets"><span class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0" role="button" aria-label="Go to slide 1"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 2"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 3"></span></div>
-      <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
-
-    </div>
-  </section>
-
-
-
 
 
 
@@ -648,7 +628,6 @@
 
     <div class="container aos-init aos-animate" data-aos="fade-up">
       <div class="section-title">
-        <h2>Gallery</h2>
         <p>Some photos from Our Restaurant</p>
       </div>
     </div>
@@ -748,7 +727,6 @@
         </div>
       </div>
     </div>
-
     <div class="container">
       <div class="copyright">
         © Copyright <strong><span>LOREM_IPSUM</span></strong>. All Rights Reserved
@@ -757,4 +735,8 @@
         Designed by <a href="https://www.linkedin.com/in/arjunkshirsagar/">Arjun</a>
       </div>
     </div>
+
   </footer>
+
+  </body>
+  </html>
