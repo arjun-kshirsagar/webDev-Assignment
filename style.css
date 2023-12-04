@@ -241,10 +241,6 @@ body {
   #navbar a:hover {
     color: #ffc107;
   }
-  
-  .mobile-nav-toggle {
-    display: none;
-  }
 
   #nav-book-btn {
     display: flex;
@@ -1956,7 +1952,7 @@ body {
     justify-content: space-between;
   }
   
-  .chefs .col-lg-4 {
+  .chefs .col {
     flex: 0 0 32%; /* Adjust the percentage as needed */
     max-width: 32%; /* Adjust the percentage as needed */
   }
@@ -1975,7 +1971,7 @@ body {
     justify-content: space-between;
   }
   
-  .chefs .col-lg-4 {
+  .chefs .col {
     flex: 0 0 32%; /* Adjust the percentage as needed */
     max-width: 32%; /* Adjust the percentage as needed */
   }
