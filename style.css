@@ -115,43 +115,6 @@ body {
   }
   
   /*--------------------------------------------------------------
-  # Back to top button
-  --------------------------------------------------------------*/
-  .back-to-top {
-    position: fixed;
-    visibility: hidden;
-    opacity: 0;
-    right: 15px;
-    bottom: 15px;
-    z-index: 996;
-    width: 44px;
-    height: 44px;
-    border-radius: 50px;
-    transition: all 0.4s;
-    border: 2px solid #cda45e;
-  }
-  
-  .back-to-top i {
-    font-size: 28px;
-    color: #cda45e;
-    line-height: 0;
-  }
-  
-  .back-to-top:hover {
-    background: #cda45e;
-    color: #1a1814;
-  }
-  
-  .back-to-top:hover i {
-    color: #444444;
-  }
-  
-  .back-to-top.active {
-    visibility: visible;
-    opacity: 1;
-  }
-  
-  /*--------------------------------------------------------------
   # Disable aos animation delay on mobile devices
   --------------------------------------------------------------*/
   @media screen and (max-width: 768px) {
@@ -240,6 +203,10 @@ body {
   
   #navbar a:hover {
     color: #ffc107;
+  }
+  
+  .mobile-nav-toggle {
+    display: none;
   }
 
   #nav-book-btn {
@@ -665,88 +632,14 @@ body {
     margin-left: 15px;
   }
   
-  #hero .play-btn {
-    width: 94px;
-    height: 94px;
-    background: radial-gradient(#cda45e 50%, rgba(205, 164, 94, 0.4) 52%);
-    border-radius: 50%;
-    display: block;
-    position: relative;
-    overflow: hidden;
-  }
   
-  #hero .play-btn::after {
-    content: '';
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translateX(-40%) translateY(-50%);
-    width: 0;
-    height: 0;
-    border-top: 10px solid transparent;
-    border-bottom: 10px solid transparent;
-    border-left: 15px solid #fff;
-    z-index: 100;
-    transition: all 400ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
-  }
-  
-  #hero .play-btn::before {
-    content: '';
-    position: absolute;
-    width: 120px;
-    height: 120px;
-    -webkit-animation-delay: 0s;
-    animation-delay: 0s;
-    -webkit-animation: pulsate-btn 2s;
-    animation: pulsate-btn 2s;
-    -webkit-animation-direction: forwards;
-    animation-direction: forwards;
-    -webkit-animation-iteration-count: infinite;
-    animation-iteration-count: infinite;
-    -webkit-animation-timing-function: steps;
-    animation-timing-function: steps;
-    opacity: 1;
-    border-radius: 50%;
-    border: 5px solid rgba(205, 164, 94, 0.7);
-    top: -15%;
-    left: -15%;
-    background: rgba(198, 16, 0, 0);
-  }
-  
-  #hero .play-btn:hover::after {
-    border-left: 15px solid #cda45e;
-    transform: scale(20);
-  }
-  
-  #hero .play-btn:hover::before {
-    content: '';
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translateX(-40%) translateY(-50%);
-    width: 0;
-    height: 0;
-    border: none;
-    border-top: 10px solid transparent;
-    border-bottom: 10px solid transparent;
-    border-left: 15px solid #fff;
-    z-index: 200;
-    -webkit-animation: none;
-    animation: none;
-    border-radius: 0;
-  }
   
   @media (min-width: 1024px) {
     #hero {
       background-attachment: fixed;
     }
   }
-  
-  @media (max-width: 992px) {
-    #hero .play-btn {
-      margin-top: 30px;
-    }
-  }
+
   
   @media (max-height: 500px) {
     #hero {
@@ -1468,13 +1361,17 @@ body {
   color:#fff;
   width: 100%;
   margin: 0px;
-  height: 2600px;
+  height: 890px;
   background-image: url(Project-3/images/testimonials-bg.jpg);
   background-blend-mode: darken;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top;
   background-color: rgba(0, 0, 0, 0.5);
+}
+
+#all-5{
+  display: flex;
 }
 
 #review{
@@ -1952,7 +1849,7 @@ body {
     justify-content: space-between;
   }
   
-  .chefs .col {
+  .chefs .col-lg-4 {
     flex: 0 0 32%; /* Adjust the percentage as needed */
     max-width: 32%; /* Adjust the percentage as needed */
   }
@@ -1971,7 +1868,7 @@ body {
     justify-content: space-between;
   }
   
-  .chefs .col {
+  .chefs .col-lg-4 {
     flex: 0 0 32%; /* Adjust the percentage as needed */
     max-width: 32%; /* Adjust the percentage as needed */
   }
